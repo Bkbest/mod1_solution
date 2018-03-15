@@ -6,6 +6,7 @@ angular.module("myFirstApp",[])
 LunchCheckController.$inject=[$scope]
 function LunchCheckController($scope){
 $scope.totvalue="";
+$scope.data="";
 $scope.getData=function()
 {
 
@@ -25,6 +26,9 @@ $scope.data="";
 };
 function number_of_items(string)
 {
+  if(string.length==0){
+    return 0;
+  }
   var totvalue=string.split(",");
 
   return totvalue.length;

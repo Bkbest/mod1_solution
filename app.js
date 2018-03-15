@@ -2,7 +2,9 @@
 'use strict';
 
 angular.module("myFirstApp",[])
-.controller("myFirstController",function($scope){
+.controller("myFirstController",LunchCheckController);
+LunchCheckController.$inject=[$scope]
+function LunchCheckController($scope){
 $scope.totvalue="";
 $scope.getData=function()
 {
@@ -27,6 +29,6 @@ function number_of_items(string)
 
   return totvalue.length;
 }
-});
+}
 
 })();
